@@ -17,10 +17,27 @@ export default function App() {
     { id: 8, title: "Appeler le vétérinaire", isCompleted: true },
   ]);
 
+  function updateTodo(todo) {
+    const updatedTodo = {
+      ...todo,
+      isCompleted: !todo.isCompleted,
+    };
+
+    const indexToUpdate = todoList.findIndex(
+      (todo) => todo.id === updatedTodo.id
+    );
+
+    const updatedTodoList = [...todoList];
+    updatedTodoListr[indexToUpdate] = updatedTodo;
+    setTodoList(updatedTodoList);
+
+    console.log(todo);
+  }
+
   function renderTodoList() {
     return todoList.map((todo) => (
       <View style={s.cardItem} key={todo.id}>
-        <CardTodo todo={todo} />
+        <CardTodo onClickCard={updateTodo} todo={todo} />
       </View>
     ));
   }
