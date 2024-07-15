@@ -6,7 +6,7 @@ export function Header() {
   return (
     <>
       <Image style={s.img} source={headerLogo} resizeMode="contain" />
-      <Text style={s.subtitle}>Tu as probablement un truc à</Text>
+      <Text style={s.subtitle}>Tu as probablement un truc à faire</Text>
     </>
   );
 }
