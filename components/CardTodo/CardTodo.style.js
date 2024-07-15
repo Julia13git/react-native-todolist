@@ -4,7 +4,6 @@ const s = StyleSheet.create({
   card: {
     height: 115,
     backgroundColor: "white",
-    display: "flex",
     flexDirection: "row",
     borderRadius: 13,
     alignItems: "center",
